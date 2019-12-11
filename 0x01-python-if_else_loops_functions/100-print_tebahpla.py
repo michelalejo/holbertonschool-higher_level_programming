@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-for i in reversed(range(97, 123)):
-    if i % 2 != 0:
-        i = i - 32
-    print('{}'.format(chr(i)), end='')
+up = 0
+for rev in range(ord('z'), ord('a') - 1, -1):
+    print("{}".format(chr(rev - up)), end="")
+    up = 32 if up == 0 else 0
