@@ -1,6 +1,9 @@
 #!/usr/bin/python3
-from add_0 import add
 if __name__ == "__main__":
-    a = 1
-    b = 2
-    print("{} + {} = {}".format(a, b, add(a, b)))
+    import sys
+    if len(sys.argv) != 1:
+        print("{:d} arguments:".format(len(sys.argv) - 1))
+        for av in range(1, len(sys.argv)):
+            print("{:d}: {}".format(av, (sys.argv[av])))
+    else:
+        print("{:d} arguments.".format(len(sys.argv) - 1))
