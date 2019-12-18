@@ -6,12 +6,8 @@
  */
 int is_palindrome(listint_t **head)
 {
-	int i = 0, j = 0, *buf;
+	int i = 0, j = 0, buf[4096];
 	listint_t *poli;
-
-	buf = malloc(sizeof(int) * 4096);
-	if (!buf)
-		return (0);
 
 	if (!head)
 		return (0);
