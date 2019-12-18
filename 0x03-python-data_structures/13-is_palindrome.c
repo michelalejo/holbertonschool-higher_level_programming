@@ -6,10 +6,8 @@
  */
 int is_palindrome(listint_t **head)
 {
+	int i = 0, j = 0, buf[4096];
 	listint_t *poli;
-	int i = 0, j = 0;
-	int buf[4096];
-
 
 	if (!head)
 		return (0);
