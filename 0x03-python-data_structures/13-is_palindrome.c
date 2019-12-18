@@ -6,10 +6,10 @@
  */
 int is_palindrome(listint_t **head)
 {
-	int i = 0, j = 0, *buf, buffer = 1024, n = 1;
+	int i = 0, j = 0, *buf;
 	listint_t *poli;
 
-	buf = malloc(sizeof(int) * buffer * n);
+	buf = malloc(sizeof(int) * 4096);
 	if (!buf)
 		return (0);
 
@@ -20,17 +20,12 @@ int is_palindrome(listint_t **head)
 		return (1);
 
 	for (i = 0; poli; poli = poli->next, i++)
-	{
-		if (i % 1000 == 0)
-		{
-			n++;
-			buf = realloc(buf, sizeof(int) * buffer * n);
-		}
 		buf[i] = poli->n;
-	}
 	for (j = 0, i--; i > j; i--, j++)
 	{
-		if (buf[j] != buf[i])
+		if (buf[j] == buf[i])
+			;
+		else
 			return (0);
 	}
 	return (1);
