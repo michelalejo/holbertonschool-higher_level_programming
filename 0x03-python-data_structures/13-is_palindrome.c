@@ -1,31 +1,27 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include "lists.h"
-
 /**
- * is_palindrome - test if a LL is also a palindrome
- * @head: begining of list
- *
- * Return: 1 for yes, 0 for no or fail
+ * is_palindrome - Funtion that checks if a singly linked list is a palindrome
+ * @head: Head
+ * Return: 1 or 0
  */
 int is_palindrome(listint_t **head)
 {
-	listint_t *seek;
+	listint_t *poli;
 	int i = 0, j = 0;
-	int arr[4096];
+	int buf[4096];
 
 
 	if (!head)
 		return (0);
-	seek = *head;
+	poli = *head;
 	if (!*head || (*head)->next == NULL)
 		return (1);
 
-	for (; seek; seek = seek->next, i++)
-		arr[i] = seek->n;
-	for (i--; i > j; i--, j++)
+	for (i = 0; poli; poli = poli->next, i++)
+		buf[i] = poli->n;
+	for (j = 0, i--; i > j; i--, j++)
 	{
-		if (arr[j] == arr[i])
+		if (buf[j] == buf[i])
 			;
 		else
 			return (0);
