@@ -10,9 +10,9 @@ def uniq_add(my_list=[]):
         return(k)
 
     if len(my_list) > 1:
-        for i in range(0, len(my_list.copy())):
+        for i in range(1, len(my_list.copy())):
             if i < len(my_list) - 1:
-                if my_list[i] == my_list[i+1]:
+                if my_list[i] == my_list[i-1]:
                     del my_list[i]
                     print(my_list)
         for p in range(len(my_list)):
