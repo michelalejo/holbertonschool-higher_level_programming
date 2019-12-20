@@ -1,10 +1,12 @@
 #!/usr/bin/python3
-my_list = [1, 2, 3, 1, 4, 2, 5]
+def uniq_add(my_list=[]):
 my_list.sort()
 cp = my_list.copy()
-j = -1
-for i in range(1, len(cp)):
-        if cp[i-1] == cp[i]:
-                del cp[i]
-print(cp)
-print(my_list)
+k = 0
+for i in range(max(cp[1:])):
+        j = i - 1
+        if cp[i-1] == cp[j-1]:
+                del cp[i-1]
+for j in range(len(cp)):
+        k = k + cp[j]
+return(k)
