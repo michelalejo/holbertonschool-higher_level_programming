@@ -20,19 +20,15 @@ class Square():
         self.__size = SizeValue
 
     def my_print(self):
-        size = self.__size
-        position = self.__position
-        if size == 0:
-            print()
+        if self.__size == 0:
+            print("")
             return
-        for r in range(position[1]):
-            print()
-        for i in range(size):
-            for spc in range(position[0]):
-                print(" ", end="")
-            for j in range(size):
-                print("#", end="")
-            print()
+
+        [print("") for i in range(self.__position[1])]
+        for j in range(self.__size):
+            [print(" ", end="") for k in range(self.__position[0])]
+            [print("#", end="") for l in range(self.__size)]
+            print("")
 
     @property
     def position(self):
