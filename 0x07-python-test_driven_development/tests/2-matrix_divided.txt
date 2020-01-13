@@ -10,18 +10,18 @@
 >>> matrix_divided(z, 3.133)
 [[0.32, 0.64, 0.96], [1.28, 1.6, 1.92]]
 
->>> matrix_divided(z, -12)
-[[-0.08, -0.17, -0.25], [-0.33, -0.42, -0.5]]
-
->>> matrix_divided(z, -4.32)
-[[-0.23, -0.46, -0.69], [-0.93, -1.16, -1.39]]
-
 >>> matrix_divided(z, -0.2)
 [[-5.0, -10.0, -15.0], [-20.0, -25.0, -30.0]]
 
 >>> matrix_divided(y, 3)
 Traceback (most recent call last):
 TypeError: object of type 'int' has no len()
+
+>>> matrix_divided(z, -12)
+[[-0.08, -0.17, -0.25], [-0.33, -0.42, -0.5]]
+
+>>> matrix_divided(z, -4.32)
+[[-0.23, -0.46, -0.69], [-0.93, -1.16, -1.39]]
 
 >>> matrix_divided(z, 0)
 Traceback (most recent call last):
