@@ -1,6 +1,13 @@
 #!/usr/bin/python3
-
+"""
+Programt to div a matrix
+the elements should be a matrix
+return the div of the elementes of matrix
+"""
 def matrix_divided(matrix, div):
+    """Programt to div a matrix
+    the elements should be a matrix
+    return the div of the elementes of matrix"""
     m = []
     if len(matrix) == 0:
         raise TypeError("matrix must be a matrix (list of lists) "
