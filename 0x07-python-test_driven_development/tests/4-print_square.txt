@@ -12,17 +12,10 @@ This is an example text file in reStructuredText format.  First import
 
 Now use it:
 
->>> print_square(0)
-
->>> print_square("Jackson")
+>>> print_square(5.5)
 Traceback (most recent call last):
     ...
 TypeError: size must be an integer
-
->>> print_square(-2)
-Traceback (most recent call last):
-    ...
-ValueError: size must be >= 0
 
 >>> print_square()
 Traceback (most recent call last):
@@ -34,7 +27,14 @@ Traceback (most recent call last):
     ...
 TypeError: size must be an integer
 
->>> print_square(5.5)
+>>> print_square(0)
+
+>>> print_square("Jackson")
 Traceback (most recent call last):
     ...
 TypeError: size must be an integer
+
+>>> print_square(-2)
+Traceback (most recent call last):
+    ...
+ValueError: size must be >= 0
