@@ -2,7 +2,6 @@
 """
 Programt that prints a square
 Print with '#'
-Return: none
 """
 
 
