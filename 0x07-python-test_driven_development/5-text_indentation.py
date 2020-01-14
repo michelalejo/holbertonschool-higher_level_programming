@@ -12,12 +12,12 @@ def text_indentation(text):
     Return: none"""
 
     if isinstance(text, str):
-        form = ['.', '?', ':']
-        start = 0
+        coincidence = ['.', '?', ':']
+        launch = 0
         for i, x in enumerate(text):
-            if x in form:
-                print(text[start:i + 1].strip() + '\n')
-                start = i + 1
-        print(text[start:].strip(), end='')
+            if x in coincidence:
+                print(text[launch:i + 1].strip() + "\n")
+                launch = i + 1
+        print(text[launch:].strip(), end='')
     if not isinstance(text, str):
         raise TypeError('text must be a string')
