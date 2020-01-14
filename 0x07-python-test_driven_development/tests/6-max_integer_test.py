@@ -32,16 +32,6 @@ class TestMaxInteger(unittest.TestCase):
     def test_tuples(self):
         self.assertEqual(max_integer((8, 3, 12)), 12)
 
-    @unittest.expectedFailure
-    def test_sets(self):
-        a = [3, 3, 9, 2, 8, 6, 9, 0, 1]
-        self.assertEqual(max_integer(set(a)), 9)
-
-    @unittest.expectedFailure
-    def test_dicts(self):
-        a = {1: 2, 3: 4, 5: 6}
-        self.assertEqual(max_integer(a), 5)
-
     def test_wrong_type(self):
         a = [1, 2, 'd', 3]
         with self.assertRaises(TypeError, msg=self.te_m):
