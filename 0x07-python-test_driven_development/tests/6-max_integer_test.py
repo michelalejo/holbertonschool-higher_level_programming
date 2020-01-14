@@ -22,13 +22,6 @@ class TestMaxInteger(unittest.TestCase):
     def test_floats(self):
         self.assertEqual(max_integer([2.94, 1, 8.493]), 8.493)
 
-    def test_multi_lists(self):
-        a = [1, 2, 3]
-        b = [1, 9, 3]
-        c = [4, 2, 1]
-        d = [a, b, c]
-        self.assertEqual(max_integer(d), [4, 2, 1])
-
     def test_tuples(self):
         self.assertEqual(max_integer((8, 3, 12)), 12)
 
