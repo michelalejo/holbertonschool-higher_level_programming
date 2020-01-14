@@ -40,6 +40,10 @@ TypeError: print_square() missing 1 required positional argument: 'size'
 Traceback (most recent call last):
 TypeError: size must be an integer
 
+>>> print_square(5.5)
+Traceback (most recent call last):
+TypeError: size must be an integer
+
 >>> print_square(e)
 Traceback (most recent call last):
 NameError: name 'e' is not defined
