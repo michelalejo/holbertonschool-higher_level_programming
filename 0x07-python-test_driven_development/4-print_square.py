@@ -2,6 +2,7 @@
 """
 Programt that prints a square
 Print with '#'
+Return: none
 """
 
 
@@ -10,13 +11,12 @@ def print_square(size):
     Print with '#'
     Return: none"""
 
+    if isinstance(size, int):
+        for i in range(size):
+            for j in range(size):
+                print('#', end="")
+            print()
     if not isinstance(size, int):
-        raise TypeError("size must be an integer")
+        raise TypeError('size must be an integer')
     if size < 0:
-        raise ValueError("size must be >= 0")
-    if not isinstance(size, float) and size < 0:
-        raise TypeError("size must be an integer")
-
-    for i in range(size):
-        [print("#", end="") for j in range(size)]
-        print("")
+        raise ValueError('size must be >= 0')
