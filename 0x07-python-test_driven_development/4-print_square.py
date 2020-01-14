@@ -4,10 +4,13 @@ Programt that prints a square
 Print with '#'
 Return: none
 """
+
+
 def print_square(size):
     """Programt that prints a square
     Print with '#'
     Return: none"""
+
     if isinstance(size, int):
         for i in range(size):
             for j in range(size):
