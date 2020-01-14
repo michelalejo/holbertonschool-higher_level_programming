@@ -1,58 +1,40 @@
->>> print_square = __import__('4-print_square').print_square
+============================
+The ```4-print_square.py```
+============================
 
->>> print_square(1)
-#
+Using ``4-print_square``
+-------------------
 
->>> print_square(4)
-####
-####
-####
-####
+This is an example text file in reStructuredText format.  First import
+``print_square`` from the ``example`` module:
+
+>>> print_square = __import__("4-print_square").print_square
+
+Now use it:
 
 >>> print_square(0)
 
+>>> print_square("Jackson")
+Traceback (most recent call last):
+    ...
+TypeError: size must be an integer
 
->>> print_square(7)
-#######
-#######
-#######
-#######
-#######
-#######
-#######
-
-
->>> print_square(8)
-########
-########
-########
-########
-########
-########
-########
-########
+>>> print_square(-2)
+Traceback (most recent call last):
+    ...
+ValueError: size must be >= 0
 
 >>> print_square()
 Traceback (most recent call last):
+    ...
 TypeError: print_square() missing 1 required positional argument: 'size'
 
->>> print_square('michel')
+>>> print_square(None)
 Traceback (most recent call last):
+    ...
 TypeError: size must be an integer
 
 >>> print_square(5.5)
 Traceback (most recent call last):
-TypeError: size must be an integer
-
->>> print_square(e)
-Traceback (most recent call last):
-NameError: name 'e' is not defined
-
->>> print_square("")
-Traceback (most recent call last):
-TypeError: size must be an integer
-
->>> n = [4, 9]
->>> print_square(n)
-Traceback (most recent call last):
+    ...
 TypeError: size must be an integer
