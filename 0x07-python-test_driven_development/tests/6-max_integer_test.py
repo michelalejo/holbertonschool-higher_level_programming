@@ -13,8 +13,8 @@ class TestMaxInteger(unittest.TestCase):
     te_m = "'>' not supported between instances of 'str' and 'int'"
 
     def test_std_behavior(self):
-        a = [1, 2, 3]
-        self.assertEqual(max_integer(a), 3)
+        n = [1, 2, 3]
+        self.assertEqual(max_integer(n), 3)
 
     def test_negatives(self):
         self.assertEqual(max_integer([-3, 5, -2]), 5)
@@ -26,6 +26,6 @@ class TestMaxInteger(unittest.TestCase):
         self.assertEqual(max_integer((8, 3, 12)), 12)
 
     def test_wrong_type(self):
-        a = [1, 2, 'd', 3]
+        n = [1, 2, 'd', 3]
         with self.assertRaises(TypeError, msg=self.te_m):
-            max_integer(a)
+            max_integer(n)
