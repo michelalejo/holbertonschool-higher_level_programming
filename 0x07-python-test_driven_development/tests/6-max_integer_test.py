@@ -10,8 +10,8 @@ class TestMaxInteger(unittest.TestCase):
     test max_integer
     Return: none"""
 
-
     te_m = "'>' not supported between instances of 'str' and 'int'"
+
     def test_std_behavior(self):
         """Test standard behavior."""
         a = [1, 2, 3]
@@ -46,7 +46,7 @@ class TestMaxInteger(unittest.TestCase):
     @unittest.expectedFailure
     def test_dicts(self):
         """Doesn't work with dicts."""
-        a = {1:2, 3:4, 5:6}
+        a = {1: 2, 3: 4, 5: 6}
         self.assertEqual(max_integer(a), 5)
 
     def test_wrong_type(self):
