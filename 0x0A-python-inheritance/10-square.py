@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-class Rectangle that inherits from BaseGeometry.
+class Rectangle that inherits from BaseGeometry and Rectangle.
 width and height objects.
 Return: NULL
 """
@@ -10,7 +10,7 @@ Rectangle = __import__('9-rectangle').Rectangle
 
 
 class Square(Rectangle):
-    """class Rectangle that inherits from BaseGeometry.
+    """class Rectangle that inherits from BaseGeometry and Rectangle.
     width and height objects.
     Return: NULL"""
 
