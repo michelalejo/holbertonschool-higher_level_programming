@@ -6,10 +6,10 @@ import json
 from sys import argv
 
 try:
-    my_list = load("add_item.json")
+    s = load("add_item.json")
 except FileNotFoundError:
-    my_list = list()
+    s = []
 for i in argv[1:]:
-    my_list.append(i)
+    s.append(i)
 
-save(my_list, "add_item.json")
+save(s, "add_item.json")
