@@ -11,3 +11,7 @@ class Student:
         if all(isinstance(i, str) for i in attrs):
             if isinstance(attrs, list):
                 return {i: getattr(self, i) for i in attrs if hasattr(self, i)}
+
+    def reload_from_json(self, json):
+        for i, j in json.items():
+            setattr(self, i, j)
