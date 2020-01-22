@@ -8,6 +8,6 @@ class Student:
     def to_json(self):
         if attrs is None:
             return self.__dict__
-        if all(isinstance(i, str) for i in attrs):
-            if isinstance(attrs, list):
+        if isinstance(attrs, list):
+            if all(isinstance(i, str) for i in attrs):
                 return {i: getattr(self, i) for i in attrs if hasattr(self, i)}
