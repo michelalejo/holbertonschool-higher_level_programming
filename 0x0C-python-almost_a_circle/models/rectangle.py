@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 "Rectangle class"
+
+
 from models.base import Base
 
 
@@ -31,12 +33,12 @@ class Rectangle(Base):
         self.__y = y
 
     @property
-    def width (self):
+    def width(self):
         "Rectangle, width getter"
         return (self.__width)
 
     @width.setter
-    def width (self, value):
+    def width(self, value):
         "Rectangle, width setter"
         if type(value) is not int:
             raise TypeError('width must be an integer')
@@ -45,12 +47,12 @@ class Rectangle(Base):
         self.__width = value
 
     @property
-    def height (self):
+    def height(self):
         "Rectangle, height getter"
         return (self.__height)
 
     @height.setter
-    def height (self, value):
+    def height(self, value):
         "Rectangle, width setter"
         if type(value) is not int:
             raise TypeError('height must be an integer')
@@ -60,15 +62,28 @@ class Rectangle(Base):
 
     @property
     def x(self):
-        "Rectangle, height getter"
+        "Rectangle, x getter"
         return (self.__x)
 
     @x.setter
-    def x (self, value):
-        "Rectangle, width setter"
+    def x(self, value):
+        "Rectangle, x setter"
         if type(value) is not int:
             raise TypeError('x must be an integer')
         if value <= 0:
             raise ValueError('x musst be > 0')
         self.__x = value
 
+    @property
+    def y(self):
+        "Rectangle, y getter"
+        return (self.__y)
+
+    @y.setter
+    def y(self, value):
+        "Rectangle, y setter"
+        if type(value) is not int:
+            raise TypeError('y must be an integer')
+        if value <= 0:
+            raise ValueError('y musst be > 0')
+        self.__y = value
