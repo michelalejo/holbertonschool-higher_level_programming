@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+B#!/usr/bin/python3
 "Rectangle class"
 
 
@@ -27,10 +27,10 @@ class Rectangle(Base):
             raise ValueError('x must be >= 0')
         if y < 0:
             raise ValueError('y must be >= 0')
-        self.width = width
-        self.height = height
-        self.x = x
-        self.y = y
+        self.__width = width
+        self.__height = height
+        self.__x = x
+        self.__y = y
 
     @property
     def width(self):
