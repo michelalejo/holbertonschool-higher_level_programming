@@ -53,9 +53,10 @@ class Base:
         object.update(**dictionary)
         return (object)
 
-    @staticmethod
-    def from_json_string(json_string):
-        "Base Staticmetohd"
-        if json_string is None or len(json_string) == 0:
+    @classmethod
+    def load_from_file(cls):
+        "Base Classmetohd"
+        if not path.isfile(cls.__name__ + ".json"):
             return []
-        return json.loads(json_string)
+        with open(cls.__name__ + ".json", "r", encoding="utf-8") as f:
+            return [cls.create(**d) for d in cls.from_json_string(f.read())]
