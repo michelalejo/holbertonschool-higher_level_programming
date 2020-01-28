@@ -52,3 +52,10 @@ class Base:
             object = Square(1)
         object.update(**dictionary)
         return (object)
+
+    @staticmethod
+    def from_json_string(json_string):
+        "Base Staticmetohd"
+        if json_string is None or len(json_string) == 0:
+            return []
+        return json.loads(json_string)
