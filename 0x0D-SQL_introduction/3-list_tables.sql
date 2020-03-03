@@ -1,0 +1,2 @@
+-- MySQL Script.
+SHOW TABLES;
