@@ -1,2 +1,2 @@
 -- MySQL Script.
-SELECT `score`, `name` FROM second_table WHERE name IS NOT NULL ORDER BY score DESC;
+SELECT id, name FROM cities WHERE state_id = 1 GROUP BY id ASC;
