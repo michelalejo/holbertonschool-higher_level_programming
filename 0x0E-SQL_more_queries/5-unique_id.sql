@@ -1,2 +1,4 @@
 -- MySQL Script.
-SELECT `score`, `name` FROM second_table WHERE name IS NOT NULL ORDER BY score DESC;
+CREATE TABLE IF NOT EXISTS unique_id(
+id INT DEFAULT "1" UNIQUE,
+name VARCHAR(256));
