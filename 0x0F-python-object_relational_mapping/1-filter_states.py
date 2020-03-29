@@ -16,7 +16,7 @@ if __name__ == "__main__":
         'passwd': argv[2],
         'db': argv[3]
     }
-    command = "SELECT * FROM states WHERE states.name like 'N%' ORDER BY states.id"
+    command = "SELECT * FROM states WHERE name like 'N%' ORDER BY states.id"
 
     db = MySQLdb.connect(**dic)
     cursor = db.cursor()
