@@ -7,8 +7,6 @@ import MySQLdb
 
 
 if __name__ == "__main__":
-    if len(argv) < 4:
-        exit(-1)
     dic = {
         'host': "localhost",
         'port': 3306,
@@ -16,7 +14,7 @@ if __name__ == "__main__":
         'passwd': argv[2],
         'db': argv[3]
     }
-    command = "SELECT * FROM states WHERE name like 'N%' ORDER BY states.id"
+    command = "SELECT * FROM states WHERE name like 'N%' ORDER BY id"
 
     db = MySQLdb.connect(**dic)
     cursor = db.cursor()
