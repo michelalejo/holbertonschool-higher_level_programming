@@ -14,7 +14,8 @@ if __name__ == "__main__":
                 'passwd': argv[2],
                 'db': argv[3]
         }
-        command = """select * from cities order by id"""
+        command = """select cities.id, cities.name, states.name from states,
+                 cities where cities.state_id = states.id order by cities.id"""
 
         db = MySQLdb.connect(**dic)
         cursor = db.cursor()
