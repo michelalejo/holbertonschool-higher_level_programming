@@ -7,8 +7,6 @@ import MySQLdb
 
 
 if __name__ == "__main__":
-    if len(argv) < 4:
-        exit(-1)
     dic = {
         'host': "localhost",
         'port': 3306,
