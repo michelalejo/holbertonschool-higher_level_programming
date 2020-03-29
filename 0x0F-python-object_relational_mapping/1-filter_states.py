@@ -23,3 +23,6 @@ if __name__ == "__main__":
     results = cursor.fetchall()
     for dates in results:
         print(dates)
+
+    cursor.close()
+    db.close()
