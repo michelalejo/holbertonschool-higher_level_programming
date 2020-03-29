@@ -14,11 +14,11 @@ if __name__ == "__main__":
         'passwd': argv[2],
         'db': argv[3]
     }
-    command = "select * from states where name = %s order by id"
+    command = "select * from states where name = '{}' order by id".format(argv[4])
 
     db = MySQLdb.connect(**dic)
     cursor = db.cursor()
-    cursor.execute(command, (argv[4],))
+    cursor.execute(command)
 
     results = cursor.fetchall()
     for dates in results:
