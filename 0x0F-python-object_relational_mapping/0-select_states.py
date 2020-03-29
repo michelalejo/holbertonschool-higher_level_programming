@@ -7,21 +7,21 @@ import MySQLdb
 
 
 if __name__ == "__main__":
-    if len(argv) != 4:
+    if len(argv) < 4:
         exit(-1)
-dic = {
-    'host': "localhost",
-    'port': 3306,
-    'user': argv[1],
-    'passwd': argv[2],
-    'db': argv[3]
-}
-command = "SELECT * FROM states ORDER BY states.id"
+    dic = {
+        'host': "localhost",
+        'port': 3306,
+        'user': argv[1],
+        'passwd': argv[2],
+        'db': argv[3]
+    }
+    command = "SELECT * FROM states ORDER BY states.id"
 
-db = MySQLdb.connect(**dic)
-cursor = db.cursor()
-cursor.execute(command)
+    db = MySQLdb.connect(**dic)
+    cursor = db.cursor()
+    cursor.execute(command)
 
-results = cursor.fetchall()
-for dates in results:
-    print(dates)
+    results = cursor.fetchall()
+    for dates in results:
+        print(dates)
