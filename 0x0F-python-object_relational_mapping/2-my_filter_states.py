@@ -7,22 +7,23 @@ import MySQLdb
 
 
 if __name__ == "__main__":
-    dic = {
-        'host': "localhost",
-        'port': 3306,
-        'user': argv[1],
-        'passwd': argv[2],
-        'db': argv[3]
-    }
-    command = "select * from states where name like binary '{}' order by id".format(argv[4])
+        dic = {
+                'host': "localhost",
+                'port': 3306,
+                'user': argv[1],
+                'passwd': argv[2],
+                'db': argv[3]
+        }
+        command = """select * from states where name like binary
+                         '{}' order by id""".format(argv[4])
 
-    db = MySQLdb.connect(**dic)
-    cursor = db.cursor()
-    cursor.execute(command)
+        db = MySQLdb.connect(**dic)
+        cursor = db.cursor()
+        cursor.execute(command)
 
-    results = cursor.fetchall()
-    for dates in results:
-        print(dates)
+        results = cursor.fetchall()
+        for dates in results:
+                print(dates)
 
-    cursor.close()
-    db.close()
+        cursor.close()
+        db.close()
