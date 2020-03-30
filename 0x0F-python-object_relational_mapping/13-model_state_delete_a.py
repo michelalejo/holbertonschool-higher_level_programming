@@ -20,7 +20,7 @@ if __name__ == "__main__":
         for dates in data.query(State).filter(State.name.like('%a%'))\
                 .order_by(State.id):
                 data.delete(dates)
-        
+
         data.commit()
 
         data.close()
