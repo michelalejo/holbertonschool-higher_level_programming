@@ -17,7 +17,8 @@ if __name__ == "__main__":
         Base.metadata.create_all(engine)
         Session = sessionmaker(bind=engine)
         data = Session()
-        for dates in data.query(State).filter(State.name.like('%a%')).order_by(State.id):
+        for dates in data.query(State).filter(State.name.like('%a%'))\
+                .order_by(State.id):
                 print("{}: {}".format(dates.id, dates.name))
 
         data.close()
