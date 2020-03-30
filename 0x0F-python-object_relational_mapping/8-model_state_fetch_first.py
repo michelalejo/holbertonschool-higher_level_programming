@@ -17,10 +17,10 @@ if __name__ == "__main__":
         Base.metadata.create_all(engine)
         Session = sessionmaker(bind=engine)
         data = Session()
-        for dates in data.query(State).order_by(State.id)[:1]:
-                if not dates:
-                        print("Nothing")
-                else:
-                        print("{}: {}".format(dates.id, dates.name))
+        dates = data.query(State).first()
+        if not dates:
+                print("Nothing")
+        else:
+                print("{}: {}".format(dates.id, dates.name))
 
         data.close()
