@@ -19,5 +19,5 @@ if __name__ == "__main__":
         data = Session()
         for dates in data.query(State).order_by(State.id):
                 print("{}: {}".format(dates.id, dates.name))
-        
+
         data.close()
