@@ -5,7 +5,6 @@ def find_peak(list_of_integers):
     for n in list_of_integers:
         if n > max:
             max = n
-    if max > 0:
-        return (max)
-    else:
+    if max == 0:
         return (None)
+    return (max)
