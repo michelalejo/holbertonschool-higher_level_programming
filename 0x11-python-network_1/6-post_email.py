@@ -5,5 +5,5 @@ import requests
 from sys import argv
 
 if __name__ == "__main__":
-    html = requests.post(sys.argv[1], data={'email': sys.argv[2]})
+    html = requests.post(argv[1], data={'email': argv[2]})
     print(html.text)
