@@ -4,5 +4,5 @@ if (n) {
   console.log('Not a number');
 } else {
   n = parseInt(process.argv[2], 10);
-  console.log(n);
+  console.log('My number: ' + n);
 }
